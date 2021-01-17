@@ -1,11 +1,11 @@
-const { app } = require('electron');
+// const { app } = require('electron');
 
 
 function showWindow() {
     console.log("1")
     try {
         const { exec, spawn } = require('child_process');
-        exec('start Skype', {
+        exec('cd /D D:\\Web Projects\\panDoora\\food_v1 code .', {
             stdio: 'inherit',
             shell: true
         }, (err, stdout, stderr) => {
@@ -49,20 +49,22 @@ function showWindow() {
 
 }
 
-function abc() {
-    var ipc = require('electron').ipcMain;
-    ipc.on('invokeAction', function (event, data) {
-        console.log("Received data in test.js => ", data)
-        var result = "I received your data in test.js";
-        event.sender.send('actionReply', result);
-    });
-}
+// function abc() {
+//     var ipc = require('electron').ipcMain;
+//     ipc.on('invokeAction', function (event, data) {
+//         console.log("Received data in test.js => ", data)
+//         var result = "I received your data in test.js";
+//         event.sender.send('actionReply', result);
+//     });
+// }
 
 
 
-app.on('ready', showWindow);
-app.on('ready', abc);
-// Quit when all windows are closed.
-app.on('window-all-closed', () => {
-    app.quit();
-});
+// app.on('ready', showWindow);
+// app.on('ready', abc);
+// // Quit when all windows are closed.
+// app.on('window-all-closed', () => {
+//     app.quit();
+// });
+
+showWindow()

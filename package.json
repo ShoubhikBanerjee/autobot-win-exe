@@ -1,26 +1,31 @@
 {
-  "name": "autobot-windows-electron-app",
+  "name": "autobot_windows_electron_app",
+  "productName": "AutoBot - Desktop Client",
   "version": "1.0.0",
   "description": "A windows app to trigger custom ations from bots like Google now to cotrol day to day life",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "package-win": "electron-packager .  --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/images/autobot_logo_small.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"AutoBot Desktop Client\""
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "Autobot",
+    "Desktop automation",
+    "NLP",
+    "NLP Jarvis",
+    "Desktop automation using NLP"
   ],
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^11.1.1"
+    "electron": "^11.1.1",
+    "electron-packager": "^15.2.0",
+    "electron-squirrel-startup": "^1.0.0"
   },
   "dependencies": {
     "auto-launch": "^5.0.5",
+    "electron-winstaller": "^4.0.1",
     "firebase-admin": "^9.4.2"
   }
 }

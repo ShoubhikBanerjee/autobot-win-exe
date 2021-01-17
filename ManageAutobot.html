@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy"
+        content="script-src 'self' 'unsafe-eval' 'unsafe-inline'; object-src 'self'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta http-equiv="X-Content-Security-Policy"
+        content="script-src 'self' 'unsafe-eval' 'unsafe-inline'; object-src 'self'">
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="assets/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/icon.css">
+</head>
+
+<body class="dark">
+
+    <div class="row">
+        <div class="col s2 text-centre" style="margin-top: 20px;">
+            <a href="index.html" data-target="slide-out" class="sidenav-trigger show-on-large" style="margin:10%;">
+                <i class="material-icons">arrow_back</i>
+            </a>
+        </div>
+        <div class="col s10 text-centre" style="margin-top: 20px;">
+            Add new device
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="device_name" type="text">
+                        <label for="device_name">Device Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="app_name" type="text">
+                        <label for="app_name">App Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="starting_command" type="text">
+                        <label for="starting_command">Command to start</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="command_to_stop" type="text">
+                        <label for="command_to_stop">Command to stop</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <label>
+                            <input type="checkbox" />
+                            <span>Add Projects</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="password" type="password" class="validate">
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email" type="email" class="validate">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        This is an inline input field:
+                        <div class="input-field inline">
+                            <input id="email_inline" type="email" class="validate">
+                            <label for="email_inline">Email</label>
+                            <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+    <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/materialize.min.js"></script>
+    <script src="assets/js/init.js"></script>
+</body>
+
+</html>
